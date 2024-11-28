@@ -1,18 +1,59 @@
 const express = require("express");
 const app = express();
-const port = process.env.PORT || 3001;
+const port = 3001;
+
 
 app.use(express.json())
 app.use(express.urlencoded({extended: true}));
 
+
 app.get("/", (req, res) => res.type('html').send(html));
+
 
 app.get('/req', (req, res) => {
     console.log("Just got a request!")
     res.send('Yo!')
 })
 
+
+app.get('/meunome', (req, res) => {
+    res.send('Meu nome é Hugo Rodrigues de Lima')
+})
+
+
+app.get('/tico', (req, res) => {
+    res.send('teco')
+})
+
+
+app.get('/pokemons', (req, res) => {
+    res.send(JSON.stringify(
+        [
+          { nome: 'Pikachu' },
+          { nome: 'Caterpie' },
+          { nome: 'Pidgeotto' },
+          { nome: 'Bulbasaur' },
+          { nome: 'Charmander' },
+          { nome: 'Squirtle' },
+          { nome: 'Krabby' },
+          { nome: 'Raticate' },
+          { nome: 'Primeape' },
+          { nome: 'Muk' }
+        ]
+    ));
+})
+app.post('/series', (req,res) =>{
+  res.send(JSON.stringify(
+    [
+      {nome: 'Punisher'},
+      {nome: 'Sherlock'},
+      {nome: 'Mentalista'}
+    ]
+  ))
+})
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+
+
 
 
 const html = `
@@ -60,7 +101,7 @@ const html = `
   </head>
   <body>
     <section>
-      Hello Express API 
+      Hello Express API
     </section>
   </body>
 </html>
