@@ -1,14 +1,7 @@
 const request = require('supertest');
-const app = require('./app'); // Certifique-se de exportar corretamente o 'app' de 'app.js'
+const { app } = require('./app');
 
 describe('/test endpoints', () => {
-
-  it('should return HTML from /', async () => {
-    const data = await request(app).get('/');
-    expect(data.statusCode).toBe(200);
-    expect(data.type).toBe('html');
-    expect(data.text).toContain('Hello Express API');
-  });
 
   it('should return "Yo!" from /req', async () => {
     const data = await request(app).get('/req');

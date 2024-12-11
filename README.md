@@ -1,6 +1,6 @@
 # README
 
-![Build Status](https://img.shields.io/github/workflow/status/Hugodelima/https://github.com/Hugodelima/express-hello-world/NodeJS_CI_CD)
+![Build Status](https://img.shields.io/github/workflow/status/Hugodelima/express-hello-world/NodeJS%20CI%20CD)
 
 This is the [Express](https://expressjs.com) [Hello world](https://expressjs.com/en/starter/hello-world.html) example
 

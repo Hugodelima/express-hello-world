@@ -1,12 +1,10 @@
 const express = require("express");
-const app = express();
 
+const app = express();
 app.use(express.json())
 app.use(express.urlencoded({extended: true}));
 
-
 app.get("/", (req, res) => res.type('html').send(html));
-
 
 app.get('/req', (req, res) => {
     console.log("Just got a request!")
@@ -51,7 +49,7 @@ app.post('/series', (req,res) =>{
 })
 
 
-
+module.exports = { app };
 
 const html = `
 <!DOCTYPE html>
