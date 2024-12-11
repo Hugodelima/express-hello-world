@@ -1,5 +1,7 @@
 # README
 
+![Build Status](https://img.shields.io/github/workflow/status/Hugodelima/https://github.com/Hugodelima/express-hello-world/NodeJS CI CD)
+
 This is the [Express](https://expressjs.com) [Hello world](https://expressjs.com/en/starter/hello-world.html) example
 
 The app in this repo is deployed at Cyclic
